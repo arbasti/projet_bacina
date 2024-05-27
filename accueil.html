@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicare: Services Médicaux</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
-            <h1>Medicare: Services Médicaux</h1>
-            <h2>Bienvenue à Omnes Education</h2>
+            <h1>Medicare</h1>
+            <h2>Votre santé, notre priorité</h2>
         </div>
-        <div class="navigation">
+        <nav class="navigation">
             <a href="#">Accueil</a>
             <a href="#">Tout Parcourir</a>
             <a href="#">Recherche</a>
             <a href="#">Rendez-vous</a>
             <a href="#">Votre Compte</a>
+        </nav>
+        <div class="welcome-section">
+            <h2>Bienvenue sur Medicare</h2>
+            <p>Votre plateforme en ligne dédiée à votre bien-être et votre santé au sein de la communauté Omnes Education.</p>
+            <p>Avec Medicare, accédez facilement à une liste complète de spécialistes de la santé, consultez leurs profils détaillés, prenez rendez-vous en quelques clics et communiquez avec eux facilement par chat, visioconférence ou email !</p>
+            <p>Où que vous soyez, Medicare est là pour vous accompagner dans votre parcours de santé.</p>
+            <p>En cas de problèmes, n'hésitez pas à contacter notre équipe d'administrateurs !</p>
         </div>
         <div class="event-section">
             <h2>Evènement de la semaine</h2>
@@ -37,10 +45,10 @@
                 <div class="btn-next">&#10095;</div>
             </div>
         </div>
-        <div class="footer">
+        <footer class="footer">
             <p>Contactez-nous : email@medicare.com | +33 1 23 45 67 89 | 10 Rue Sextius Michel, 75015 Paris</p>
             <div id="map" class="google-map"></div>
-        </div>
+        </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
