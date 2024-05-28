@@ -1,9 +1,11 @@
+<!-- La page d'accueil de notre site web Medicare -->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Medicare: Services Médicaux</title>
+	<title>Medicare: Accueil</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	<!-- Attention l'ordre des fichiers CSS est important-->
@@ -12,7 +14,7 @@
 	<link rel="stylesheet" href="rechercheCSS.css">
 </head>
 <body>
-	<?php include 'config.php'; ?>
+	<?php include 'config.php'; ?> <!-- On ajoute la config -->
 	<div class="wrapper">
 		<div class="header">
 			<h1>Medicare</h1>
@@ -31,6 +33,17 @@
 		</nav>
 		<div id="search-bar" class="search-bar">
 			<input type="text" id="search-input" placeholder="Rechercher un médecin par nom ou prénom...">
+			<div class="filter-buttons">
+				<button class="filter-button" data-specialization="Généraliste">Généraliste</button>
+				<button class="filter-button" data-specialization="Addictologie">Addictologie</button>
+				<button class="filter-button" data-specialization="Andrologie">Andrologie</button>
+				<button class="filter-button" data-specialization="Cardiologie">Cardiologie</button>
+				<button class="filter-button" data-specialization="Dermatologie">Dermatologie</button>
+				<button class="filter-button" data-specialization="Gastro-Hépato-Entérologie">Gastro-Hépato-Entérologie</button>
+				<button class="filter-button" data-specialization="Gynécologie">Gynécologie</button>
+				<button class="filter-button" data-specialization="IST">IST</button>
+				<button class="filter-button" data-specialization="Ostéopathie">Ostéopathie</button>
+			</div>
 		</div>
 		<div id="search-results" class="search-results"></div>
 		<div class="welcome-section">
@@ -80,6 +93,7 @@
 		// Show/hide search bar
 		$('#search-button').click(function() {
 			$('#search-bar').toggle();
+			$('#search-results').empty(); // Clear search results when toggling the search bar
 		});
 
 		// Search functionality
@@ -97,6 +111,19 @@
 			} else {
 				$('#search-results').empty();
 			}
+		});
+
+		// Filter functionality
+		$('.filter-button').click(function() {
+			var specialization = $(this).data('specialization');
+			$.ajax({
+				url: 'search.php',
+				method: 'GET',
+				data: { specialization: specialization },
+				success: function(data) {
+					$('#search-results').html(data);
+				}
+			});
 		});
 	</script>
 </body>
