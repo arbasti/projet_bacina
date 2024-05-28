@@ -11,7 +11,7 @@
 	<!-- Attention l'ordre des fichiers CSS est important-->
 	<link rel="stylesheet" href="accueil.css">
 	<link rel="stylesheet" href="squelette.css">
-	<link rel="stylesheet" href="rechercheCSS.css">
+	<link rel="stylesheet" href="recherche.css">
 </head>
 <body>
 	<?php include 'config.php'; ?> <!-- On ajoute la config -->
