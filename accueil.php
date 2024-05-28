@@ -77,54 +77,9 @@
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="carousel.js"></script>
+	<script src="accueil_java/carousel.js"></script>
 	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-	<script>
-		var map = L.map('map').setView([48.85117091598405, 2.2885323073959074], 15); // Coordinates for 10 Rue Sextius Michel, 75015 Paris
-
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
-
-		L.marker([48.85117091598405, 2.2885323073959074]).addTo(map)
-			.bindPopup('10 Rue Sextius Michel, 75015 Paris')
-			.openPopup();
-
-		// Show/hide search bar
-		$('#search-button').click(function() {
-			$('#search-bar').toggle();
-			$('#search-results').empty(); // Clear search results when toggling the search bar
-		});
-
-		// Search functionality
-		$('#search-input').on('input', function() {
-			var query = $(this).val();
-			if (query.length > 2) {
-				$.ajax({
-					url: 'search.php',
-					method: 'GET',
-					data: { search: query },
-					success: function(data) {
-						$('#search-results').html(data);
-					}
-				});
-			} else {
-				$('#search-results').empty();
-			}
-		});
-
-		// Filter functionality
-		$('.filter-button').click(function() {
-			var specialization = $(this).data('specialization');
-			$.ajax({
-				url: 'search.php',
-				method: 'GET',
-				data: { specialization: specialization },
-				success: function(data) {
-					$('#search-results').html(data);
-				}
-			});
-		});
-	</script>
+	<script src="map.js"></script>
+	<script src="recherche.js"></script>
 </body>
 </html>
