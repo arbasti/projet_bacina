@@ -1,59 +1,59 @@
 
 .carousel-section {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .carousel-section #carrousel {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-    max-width: 800px; /* Center the carousel */
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	border-radius: 10px;
+	max-width: 800px; /* Center the carousel */
 }
 
 .carousel-section #carrousel ul {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    padding: 0;
-    margin: 0;
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	padding: 0;
+	margin: 0;
 }
 
 .carousel-section #carrousel li {
-    list-style: none;
-    min-width: 100%;
-    box-sizing: border-box;
+	list-style: none;
+	min-width: 100%;
+	box-sizing: border-box;
 }
 
 .carousel-section #carrousel img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
 }
 
 .carousel-section .btn-prev,
 .carousel-section .btn-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	font-size: 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
 }
 
 .carousel-section .btn-prev {
-    left: 10px;
+	left: 10px;
 }
 
 .carousel-section .btn-next {
-    right: 10px;
+	right: 10px;
 }
