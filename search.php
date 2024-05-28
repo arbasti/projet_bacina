@@ -42,5 +42,5 @@ if ($result->num_rows > 0) {
 
 echo $output;
 
-$conn->close();
+$conn->close(); /*fermeture de la connexion*/
 ?>

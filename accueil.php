@@ -12,8 +12,8 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
-            <h1>Medicare</h1>
+    	<div class="header">
+        	<h1>Medicare</h1>
             <h2>Votre santé, notre priorité</h2>
             <img src="images/logo.png" alt="Logo Medicare" class="logo">
         </div>
@@ -83,13 +83,13 @@
             .bindPopup('10 Rue Sextius Michel, 75015 Paris')
             .openPopup();
 
-        // Show/hide search bar
+        // montrer / cacher la barre de recherche
         $('#search-button').click(function() {
             $('#search-bar').toggle();
-            $('#search-results').empty(); // Clear search results when toggling the search bar
+            $('#search-results').empty(); //on supprime tout quand on appui à nouveau sur le bouton
         });
 
-        // Search functionality
+        // barre de recherche
         $('#search-input').on('input', function() {
             var query = $(this).val();
             if (query.length > 2) {
@@ -106,7 +106,7 @@
             }
         });
 
-        // Filter functionality
+        // boutons de filtre
         $('.filter-button').click(function() {
             var specialization = $(this).data('specialization');
             $.ajax({

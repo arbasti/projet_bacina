@@ -22,5 +22,5 @@ $(document).ready(function () {
 		cycleImages();
 	});
 
-	setInterval(cycleImages, 5000); // ttes les 5 sec on change image
+	setInterval(cycleImages, 5000); //ttes les 5 sec on change image
 });

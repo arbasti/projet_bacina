@@ -1,4 +1,4 @@
 <?php
-	// On démarre la session
+	//On démarre la session
 	session_start();
 ?>

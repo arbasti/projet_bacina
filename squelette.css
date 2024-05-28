@@ -97,8 +97,8 @@ body {
 	overflow: hidden;
 	height: 300px;
 	width: 100%;
-	max-width: 800px; /* Center the map */
-	margin: 0 auto; /* Center the element */
+	max-width: 800px; /* centré */
+	margin: 0 auto; /* centré */
 }
 
 .footer {
