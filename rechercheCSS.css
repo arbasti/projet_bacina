@@ -1,16 +1,18 @@
+/* Ajoutez ces styles à votre fichier CSS existant */
+
 /* Styles pour la barre de recherche */
 .search-bar {
-    display: none;
-    text-align: center;
-    margin: 20px 0;
+	display: none;
+	text-align: center;
+	margin: 20px 0;
 }
 
 .search-bar input {
-    width: 80%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1em;
+	width: 80%;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 1em;
 }
 
 .filter-buttons {
@@ -34,31 +36,31 @@
 }
 
 .search-results {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    padding: 10px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px;
 }
 
 .search-result {
-    padding: 10px;
-    border-bottom: 1px solid #eee;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
 }
 
 .search-result h3 {
-    margin: 0;
+	margin: 0;
 }
 
 .search-result p {
-    margin: 5px 0 0;
+	margin: 5px 0 0;
 }
 
 .search-result a {
-    text-decoration: none;
-    color: #0A74DA;
+	text-decoration: none;
+	color: #0A74DA;
 }
 
 .search-result a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
