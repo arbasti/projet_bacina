@@ -1,7 +1,3 @@
-<?php
-	session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,11 +6,13 @@
 	<title>Medicare: Services Médicaux</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	<!-- Attention l'ordre des fichiers CSS est important-->
 	<link rel="stylesheet" href="accueil.css">
 	<link rel="stylesheet" href="squelette.css">
-	<link rel="stylesheet" href="rechercheCSS.css"> <!-- Inclusion du nouveau fichier CSS  ODRE DES CSS IMPORTANT-->
+	<link rel="stylesheet" href="rechercheCSS.css">
 </head>
 <body>
+	<?php include 'config.php'; ?>
 	<div class="wrapper">
 		<div class="header">
 			<h1>Medicare</h1>
