@@ -12,10 +12,11 @@
 		die("Connection failed: " . $conn->connect_error);
 	}
 
-	$search = $_GET['search'];
+	$search = isset($_GET['search']) ? $_GET['search'] : '';
+$specialization = isset($_GET['specialization']) ? $_GET['specialization'] : '';
 
-	$sql = "SELECT ID_Médecin, Nom, Prénom, Spécialité FROM Médecin WHERE Nom LIKE '%$search%' OR Prénom LIKE '%$search%'";
-	$result = $conn->query($sql);
+$sql = "SELECT ID_Médecin, Nom, Prénom, Spécialité FROM Médecin WHERE Nom LIKE '%$search%' OR Prénom LIKE '%$search%'";
+$result = $conn->query($sql);
 
 	$output = '';
 
