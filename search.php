@@ -12,9 +12,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$search = $_GET['search'];
+$search = isset($_GET['search']) ? $_GET['search'] : '';
+$specialization = isset($_GET['specialization']) ? $_GET['specialization'] : '';
 
-$sql = "SELECT ID_Médecin, Nom, Prénom, Spécialité FROM Médecin WHERE Nom LIKE '%$search%' OR Prénom LIKE '%$search%'";
+$sql = "SELECT ID_Médecin, Nom, Prénom, Spécialité FROM Médecin WHERE 1=1";
+
+if ($search) {
+    $sql .= " AND (Nom LIKE '%$search%' OR Prénom LIKE '%$search%')";
+}
+
+if ($specialization) {
+    $sql .= " AND Spécialité = '$specialization'";
+}
+
 $result = $conn->query($sql);
 
 $output = '';
