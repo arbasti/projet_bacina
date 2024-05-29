@@ -1,0 +1,65 @@
+/* login-register.css */
+
+.cadre {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	margin: 20px auto; /* Ajoute de l'espace en haut et en bas */
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	width: 35%;
+}
+
+.cadre h2 {
+	text-align: center;
+	font-size: 36px;
+}
+
+.cadre a {
+	font-size: 12px;
+}
+
+.cadre .cadre {
+	padding: 10px;
+	background-color: #FFCDCD;
+	width: 90%;
+}
+
+.cadre .cadre p {
+	font-size: 9px;
+}
+
+form {
+	width: 100%;
+	max-width: 100%;
+	text-align: left;
+}
+
+label {
+	display: block;
+	margin: 10px 0 5px;
+}
+
+input {
+	width: 95%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
