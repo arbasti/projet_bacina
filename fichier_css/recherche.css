@@ -63,3 +63,24 @@
 .filter-button:hover {
 	background-color: #005bb5;
 }
+
+
+.search-result {
+    display: flex;
+    align-items: center; /* alligne éléments à la vecticale */
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-result img {
+    width: 100px; /* réglage taille image */
+    height: 100px; /* réglage taille image */
+    border-radius: 50%; /* rend l'image ronde */
+    margin-right: 20px; /* espace entre image et texte */
+}
+
+.search-result-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
