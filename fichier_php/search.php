@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
         $output .= '<div class="search-result">';
         if ($row['Photo']) {
             // chemin pour les PDP des médecins
-            $output .= '<img src="../13_medecins/' . $row['Photo'] . '" alt="Photo de ' . $row['Prénom'] . ' ' . $row['Nom'] . '" style="float: left; margin-right: 20px;" height="100" width="100">';
+            $output .= '<img src="../images/' . $row['Photo'] . '" alt="Photo de ' . $row['Prénom'] . ' ' . $row['Nom'] . '" style="float: left; margin-right: 20px;" height="100" width="100">';
         }
         $output .= '<div style="display: flex; flex-direction: column; justify-content: center;">';
         $output .= '<h3><a href="medecin.php?id=' . $row['ID_Médecin'] . '">' . $row['Prénom'] . ' ' . $row['Nom'] . '</a></h3>';
