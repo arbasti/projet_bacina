@@ -1,14 +1,14 @@
 <?php
 
-	// On démarre la session
-	session_start();
-	if (!isset($_SESSION['id']))
-	{
-		$_SESSION['id'] = NULL; // Définir la valeur par défaut (NULL) si elle n'est pas définie
-	}
-	if (!isset($_SESSION['erreur']))
-	{
-		$_SESSION['erreur'] = NULL; // Définir la valeur par défaut (NULL) si elle n'est pas définie
+    // On démarre la session
+    session_start();
+    if (!isset($_SESSION['id']))
+    {
+        $_SESSION['id'] = NULL; // Définir la valeur par défaut (NULL) si elle n'est pas définie
+    }
+    if (!isset($_SESSION['erreur']))
+    {
+        $_SESSION['erreur'] = NULL; // Définir la valeur par défaut (NULL) si elle n'est pas définie
     }
 
     // identifierBDD utilisée
