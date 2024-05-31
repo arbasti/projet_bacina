@@ -1,6 +1,9 @@
 <?php
 	include('config.php'); // ce fichier contient la connexion à la base de données
 
+	// On démarre la session
+	session_start();
+
 	// Récupération des données du formulaire
 	$identifiant = isset($_POST["identifiant"]) ? $_POST["identifiant"] : "";
 	$password = isset($_POST["password"]) ? $_POST["password"] : "";
@@ -22,6 +25,7 @@
 	{
 		$_SESSION['erreur'] = "ID, adresse email ou mot de passe incorrect.";
 		header("Location: ../fichier_html/login.php?erreur");
+		exit();
 	}
 
 	// On ferme la connexion
