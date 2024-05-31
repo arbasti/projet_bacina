@@ -3,7 +3,7 @@ include '../fichier_php/config.php'; // Connexion à la base de données
 
 $specialization = isset($_GET['specialization']) ? $_GET['specialization'] : 'Généraliste'; // Valeur par défaut
 
-$sql = "SELECT * FROM médecin WHERE Spécialité = ?";
+$sql = "SELECT * FROM medecin WHERE spécialité = ?";
 ?>
 
 <!DOCTYPE html>
@@ -43,13 +43,13 @@ $sql = "SELECT * FROM médecin WHERE Spécialité = ?";
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo "<div class='search-result'>";
-                        echo "<img src='../images/" . $row["Photo"] . "' alt='Photo de " . $row["Nom"] . "'>";
+                        echo "<img src='../images/" . $row["photo"] . "' alt='Photo de " . $row["nom"] . "'>";
                         echo "<div class='search-result-details'>";
-                        echo "<h3><a href='profil_medecin.php?id=" . $row["ID_Médecin"] . "'>" . $row["Nom"] . " " . $row["Prénom"] . "</a></h3>";
-                        echo "<p>Spécialité: " . $row["Spécialité"] . "</p>"; // Ajout de la spécialisation
-                        echo "<p>Email: " . $row["Email"] . "</p>";
-                        echo "<p>Téléphone: " . $row["Téléphone"] . "</p>";
-                        echo "<p>" . $row["Bureau"] . "</p>";
+                        echo "<h3><a href='profil_medecin.php?id=" . $row["ID_Medecin"] . "'>" . $row["nom"] . " " . $row["prenom"] . "</a></h3>";
+                        echo "<p>Spécialité: " . $row["spécialité"] . "</p>"; // Ajout de la spécialisation
+                        echo "<p>Email: " . $row["email"] . "</p>";
+                        echo "<p>Téléphone: " . $row["telephone"] . "</p>";
+                        echo "<p>" . $row["bureau"] . "</p>";
                         echo "</div>";
                         echo "</div>";
                     }
