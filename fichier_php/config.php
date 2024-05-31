@@ -12,7 +12,6 @@
     }
 
     // identifierBDD utilisée
-    $database = "medicare_bdd";
     $database = "medicare";
 
     // Connexion à notre BDD
