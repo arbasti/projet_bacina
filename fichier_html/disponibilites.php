@@ -5,14 +5,14 @@ include '../fichier_php/header.php';  // Inclusion du header
 <?php
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM médecin WHERE ID_Médecin = $id";
+    $sql = "SELECT * FROM medecin WHERE ID_Medecin = $id";
     $result = $db_handle->query($sql);
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         echo "<div class='profile-container'>";
         echo "<div class='profile-details'>";
-        echo "<h1>Prendre un rendez-vous avec " . $row["Nom"] . " " . $row["Prénom"] . "</h1>";
+        echo "<h1>Prendre un rendez-vous avec " . $row["nom"] . " " . $row["prenom"] . "</h1>";
         echo "</div>";
         echo "</div>";
 
