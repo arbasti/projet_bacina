@@ -5,7 +5,7 @@ include '../fichier_php/header.php';  // Inclusion du header
 <?php
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM médecin WHERE ID_Médecin = $id";
+    $sql = "SELECT * FROM medecin WHERE ID_Medecin = $id";
     $result = $db_handle->query($sql);
 
     if ($result->num_rows > 0) {
@@ -13,8 +13,8 @@ if (isset($_GET['id'])) {
         echo "<div class='profile-container'>";
         echo "<div class='profile-image'><img src='../images/" . $row["Photo"] . "' alt='Photo de profil'></div>";
         echo "<div class='profile-details'>";
-        echo "<h1>" . $row["Nom"] . " " . $row["Prénom"] . "</h1>";
-        echo "<p>Spécialité: " . $row["Spécialité"] . "</p>";
+        echo "<h1>" . $row["nom"] . " " . $row["prenom"] . "</h1>";
+        echo "<p>Spécialité: " . $row["spécialité"] . "</p>";
         echo "<p>Email: " . $row["Email"] . "</p>";
         echo "<p>Téléphone: " . $row["Téléphone"] . "</p>";
         echo "</div>";
