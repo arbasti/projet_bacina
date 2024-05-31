@@ -11,12 +11,12 @@ if (isset($_GET['id'])) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         echo "<div class='profile-container'>";
-        echo "<div class='profile-image'><img src='../images/" . $row["Photo"] . "' alt='Photo de profil'></div>";
+        echo "<div class='profile-image'><img src='../images/" . $row["photo"] . "' alt='Photo de profil'></div>";
         echo "<div class='profile-details'>";
         echo "<h1>" . $row["nom"] . " " . $row["prenom"] . "</h1>";
         echo "<p>Spécialité: " . $row["spécialité"] . "</p>";
-        echo "<p>Email: " . $row["Email"] . "</p>";
-        echo "<p>Téléphone: " . $row["Téléphone"] . "</p>";
+        echo "<p>Email: " . $row["email"] . "</p>";
+        echo "<p>Téléphone: " . $row["telephone"] . "</p>";
         echo "</div>";
         echo "<div class='buttons'>";
         echo "<a href='disponibilites.php?id=$id' class='button'>RDV</a>";
