@@ -21,13 +21,21 @@
 	font-size: 12px;
 }
 
-.cadre .cadre {
+.erreur {
 	padding: 10px;
 	background-color: #FFCDCD;
-	width: 90%;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: 95%;
 }
 
-.cadre .cadre p {
+.advice {
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #FFF7C4;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	width: 95%;
 	font-size: 9px;
 }
 
@@ -39,13 +47,16 @@ form {
 
 label {
 	display: block;
-	margin: 10px 0 5px;
+	margin-bottom: 5px;
+}
+
+table input {
+	width: 80%;
 }
 
 input {
 	width: 95%;
 	padding: 10px;
-	margin-bottom: 10px;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 }

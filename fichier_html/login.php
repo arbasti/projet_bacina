@@ -54,9 +54,19 @@
 
 		<div class="cadre">
 			<h2>Connexion</h2>
+
+			<?php if ($_SESSION['erreur'] != NULL): ?>
+				<div class="erreur">
+					<?php
+						echo($_SESSION['erreur']);
+						$_SESSION['erreur'] = NULL;
+					?>
+				</div>
+			<?php endif; ?>
+			
 			<form action="../fichier_php/process_login.php" method="post">
-				<label for="login_user">Utilisateur:</label>
-				<input type="text" name="user" placeholder="Identifiant (ID) ou Email" required><br><br>
+				<label for="login_identifiant">Utilisateur:</label>
+				<input type="text" name="identifiant" placeholder="Identifiant (ID) ou Email" required><br><br>
 
 				<label for="login_password">Mot de passe:</label>
 				<input type="password" name="password" required><br><br>
@@ -65,7 +75,7 @@
 				<a href="register.php">Créer mon compte</a>
 			</form>
 			
-			<div class="cadre">
+			<div class="advice">
 				<p>Chaque jour, un million et demi de personnes sont victimes de piratages informatiques. Protégez-vous dès maintenant ! Mettez à jour vos logiciels, utilisez des mots de passe forts et méfiez-vous des demandes d'informations personnelles suspectes.<br>Ensemble, restons vigilants contre les cybermenaces. 🛡️</p>
 			</div>
 		</div>

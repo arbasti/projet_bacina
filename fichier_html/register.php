@@ -54,25 +54,34 @@
 
 		<div class="cadre">
 			<h2>Inscription</h2>
-			<form action="../fichier_php/process_login.php" method="post">
-				<label for="register_nom">Nom:</label>
-				<input type="text" name="nom" required><br><br>
+			<form action="../fichier_php/process_register.php" method="post">
+				<table>
+					<td>
+						<label for="register_nom">Nom:</label>
+						<input type="text" name="nom" required><br><br>
+					</td>
+					<td>
+						<label for="register_prenom">Prénom:</label>
+						<input type="text" name="prenom" required><br><br>
+					</td>
+				</table>
 
-				<label for="register_prenom">Prénom:</label>
-				<input type="text" name="prenom" required><br><br>
+				<label for="register_adresse">Adresse:</label>
+				<input type="text" name="adresse" required><br><br>
 
 				<label for="register_email">Email:</label>
 				<input type="email" name="email" required><br><br>
 
-				<label for="login_password">Mot de passe:</label>
+				<label for="register_password">Mot de passe:</label>
 				<input type="password" name="password" required><br><br>
+				<input type="password" name="repassword" placeholder="🔒 Confirmer le mot de passe" required><br><br>
 
 				<button type="submit">S'Inscrire</button>
 				<a href="login.php">Je possède déjà un compte</a>
 			</form>
 
-			<div class="cadre">
-				<p>Chaque jour, un million et demi de personnes sont victimes de piratages informatiques. Protégez-vous dès maintenant ! Mettez à jour vos logiciels, utilisez des mots de passe forts et méfiez-vous des demandes d'informations personnelles suspectes.<br>Ensemble, restons vigilants contre les cybermenaces. 🛡️</p>
+			<div class="advice">
+				<p>Chaque jour, un million et demi de personnes sont victimes de piratages informatiques. Protégez-vous dès maintenant ! Mettez à jour vos logiciels, utilisez des mots de passe forts et méfiez-vous des demandes d'informations personnelles suspectes.<br><br>Ensemble, restons vigilants contre les cybermenaces. 🛡️</p>
 			</div>
 		</div>
 

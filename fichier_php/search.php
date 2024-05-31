@@ -8,12 +8,12 @@ $sql = "SELECT ID_Médecin, Nom, Prénom, Spécialité, Photo, Bureau, Télépho
 
 // condition de recherche par nom/prénom/spécialisation
 if ($search) {
-    $sql .= " AND (Nom LIKE '%$search%' OR Prénom LIKE '%$search%' OR Spécialité LIKE '%$search%')";
+    $sql .= " AND (Nom LIKE '%" . mysqli_real_escape_string($db_handle, $search) . "%' OR Prénom LIKE '%" . mysqli_real_escape_string($db_handle, $search) . "%' OR Spécialité LIKE '%" . mysqli_real_escape_string($db_handle, $search) . "%')";
 }
 
 // condition de spécialisation
 if ($specialization) {
-    $sql .= " AND Spécialité = '$specialization'";
+    $sql .= " AND Spécialité = '" . mysqli_real_escape_string($db_handle, $specialization) . "'";
 }
 
 // tri par ordre croissant du prénom
@@ -25,20 +25,17 @@ $result = mysqli_query($db_handle, $sql);
 $output = '';
 
 if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $output .= '<div class="search-result">';
-        if ($row['Photo']) {
-            // chemin pour les PDP des médecins
-            $output .= '<img src="../images/' . $row['Photo'] . '" alt="Photo de ' . $row['Prénom'] . ' ' . $row['Nom'] . '" style="float: left; margin-right: 20px;" height="100" width="100">';
-        }
-        $output .= '<div style="display: flex; flex-direction: column; justify-content: center;">';
-        $output .= '<h3><a href="medecin.php?id=' . $row['ID_Médecin'] . '">' . $row['Prénom'] . ' ' . $row['Nom'] . '</a></h3>';
-        $output .= '<p>' . $row['Spécialité'] . '</p>';
-        $output .= '<p>Bureau: ' . $row['Bureau'] . '</p>';
-        $output .= '<p>Téléphone: ' . $row['Téléphone'] . '</p>';
-        $output .= '<p>Email: ' . $row['Email'] . '</p>';
-        $output .= '</div>';
-        $output .= '</div>';
+    while ($row = $result->fetch_assoc()) {
+        echo "<div class='search-result'>";
+        echo "<img src='../images/" . $row["Photo"] . "' alt='Photo de " . $row["Nom"] . "'>";
+        echo "<div class='search-result-details'>";
+        echo "<h3><a href='profil_medecin.php?id=" . $row["ID_Médecin"] . "'>" . $row["Nom"] . " " . $row["Prénom"] . "</a></h3>";
+        echo "<p>Spécialité: " . $row["Spécialité"] . "</p>"; // Ajout de la spécialisation
+        echo "<p>Email: " . $row["Email"] . "</p>";
+        echo "<p>Téléphone: " . $row["Téléphone"] . "</p>";
+        echo "<p>Bureau: " . $row["Bureau"] . "</p>";
+        echo "</div>";
+        echo "</div>";
     }
 } else {
     $output = '<p>Aucun résultat trouvé</p>';

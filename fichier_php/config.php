@@ -6,9 +6,14 @@
 	{
 		$_SESSION['id'] = NULL; // Définir la valeur par défaut (NULL) si elle n'est pas définie
 	}
+	if (!isset($_SESSION['erreur']))
+	{
+		$_SESSION['erreur'] = NULL; // Définir la valeur par défaut (NULL) si elle n'est pas définie
+    }
 
     // identifierBDD utilisée
-    $database = "medicare_BDD";
+    $database = "medicare_bdd";
+    $database = "medicare";
 
     // Connexion à notre BDD
     $db_handle = mysqli_connect('localhost', 'root', '');
@@ -18,5 +23,4 @@
     if (!$db_found) {
         die("Database not found");
     }
-
 ?>

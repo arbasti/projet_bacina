@@ -14,9 +14,11 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
 
 	<!-- Attention l'ordre des fichiers CSS est important-->
+	
 	<link rel="stylesheet" href="../fichier_css/accueil.css">
-	<link rel="stylesheet" href="../fichier_css/squelette.css">
 	<link rel="stylesheet" href="../fichier_css/recherche.css">
+	<link rel="stylesheet" href="../fichier_css/squelette.css">
+	
 </head>
 <body>
 	<!-- On ajoute la config.php -->
@@ -28,16 +30,48 @@
 			<h2>Votre santé, notre priorité</h2>
 			<a href="#"><img src="../images/logo.png" alt="Logo Medicare" class="logo"></a>
 		</div>
+
+			
 		<nav class="navigation">
-			<a href="#">Accueil</a>
-			<a href="#" id="search-button">Rechercher</a>
-			<a href="#">Tout Parcourir</a>
-			<a href="#">Rendez-vous</a>
-			<a href="votre-compte.php">Votre Compte</a>
-			<?php if ($_SESSION['id'] != NULL): ?>
-				<a href="../fichier_php/logout.php">Déconnexion</a>
-			<?php endif; ?>
-		</nav>
+    <a href="#">Accueil</a>
+    <a href="#" id="search-button">Rechercher</a>
+
+
+	<!-- Intégration du bouton et des menus déroulants -->
+	<div class="dropdown">
+    <a href="#" class="dropbtn">Tout Parcourir</a>
+    <div class="dropdown-content">
+        <a href="specialistes.php?specialization=Généraliste">Médecins Généralistes</a>
+		<div class="dropdown-specialized">
+    <a href="#" class="dropbtn-specialized">Médecins Spécialisés</a>
+    <div class="dropdown-content-specialized">
+        <a href="specialistes.php?specialization=Addictologie">Addictologie</a>
+        <a href="specialistes.php?specialization=Andrologie">Andrologie</a>
+        <a href="specialistes.php?specialization=Cardiologie">Cardiologie</a>
+        <a href="specialistes.php?specialization=Dermatologie">Dermatologie</a>
+        <a href="specialistes.php?specialization=Gastro-Hépato-Entérologie">Gastro-Hépato-Entérologie</a>
+        <a href="specialistes.php?specialization=Gynécologie">Gynécologie</a>
+        <a href="specialistes.php?specialization=IST">IST</a>
+        <a href="specialistes.php?specialization=Ostéopathie">Ostéopathie</a>
+    </div>
+</div>
+
+        <a href="laboratoire.php">Laboratoire</a>
+    </div>
+</div>
+
+
+
+
+    <a href="#">Rendez-vous</a>
+    <a href="votre-compte.php">Votre Compte</a>
+    <?php if ($_SESSION['id'] != NULL): ?>
+        <a href="../fichier_php/logout.php">Déconnexion</a>
+    <?php endif; ?>
+
+
+</nav>
+
 		<div id="search-bar" class="search-bar">
 			<input type="text" id="search-input" placeholder="Rechercher un médecin par nom ou prénom...">
 			<div class="filter-buttons">

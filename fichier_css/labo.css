@@ -1,0 +1,117 @@
+/* Premier Code */
+
+/* Conteneurs Généraux */
+.conteneur {
+    border: 4px solid darkblue;
+    padding: 10px;
+    width: 600px;
+    background-color: white;
+    /*margin-bottom: 0px;*/
+    border-radius: 15px;
+}
+
+#leftcolumn, .listings-page img {
+    float: left;
+    /*width: 150px;*/
+}
+
+#rightcolumn {
+    margin-left: 500px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+/* Divers conteneurs pour des styles spéciaux */
+.conteneur2, .conteneur3, .conteneur4, .conteneur5 {
+        /* Vos styles existants pour le conteneur2 */
+        position: relative; /* Pour positionner l'image à l'intérieur */
+        overflow: hidden; /* Pour cacher le dépassement de l'image */
+    border: 2px solid black;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 100px;
+    border-radius: 5px;
+}
+
+.conteneur2, .conteneur3 {
+    width: 1175px;
+}
+
+.conteneur4, .conteneur5 {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.conteneur3, .conteneur4 {
+    padding: 15px;
+    width: 1172px;
+}
+
+.conteneur4 {
+    height: 510px;
+}
+
+.conteneur5 {
+    width: 400px;
+    height: 280px;
+}
+
+.service-image {
+    /*position: absolute; /* Pour positionner l'image à l'intérieur du conteneur */
+    top: 0; /* Aligner l'image en haut */
+    left: 0; /* Aligner l'image à gauche */
+    width: 100%; /* Pour remplir entièrement le conteneur parent */
+    height: 100%; /* Pour remplir entièrement le conteneur parent */
+    object-fit: cover; /* Pour ajuster l'image sans déformation */
+}
+
+
+
+
+/* Boutons et Formulaires */
+.appointment-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+    background-color: #005bb5;
+    border-radius: 5px;
+    color: white;
+}
+
+#appointment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+#appointment-form label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#appointment-form input, #appointment-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#appointment-form button {
+    align-self: center;
+    background-color: #0A74DA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#appointment-form button:hover {
+    background-color: #005bb5;
+}
+

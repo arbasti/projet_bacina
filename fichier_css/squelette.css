@@ -5,6 +5,11 @@ body {
 	box-sizing: border-box;
 	background-color: #F5F5F5;
 	color: #333333;
+	background-image: url('../images/fond.jpg');
+    background-size: cover;  /* Couvre tout l'espace disponible */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+	background-attachment: fixed; /* Fixe l'image de fond */
 }
 
 .wrapper {
@@ -102,7 +107,7 @@ body {
 }
 
 .footer {
-	background-color: #F5F5F5;
+	background-color: rgba(255, 255, 255, 0.8); /* Blanc avec 80% d'opacité */
 	padding: 20px;
 	text-align: center;
 	border-top: 2px solid #CCCCCC;
@@ -112,4 +117,14 @@ body {
 	margin: 0;
 	color: #333333;
 	font-size: 1em;
+}
+
+.search-result {
+    background-color: rgba(255, 255, 255, 0.9); /* Blanc avec 80% d'opacité */
+    padding: 15px; /* Ajoutez du padding autour des éléments pour un meilleur rendu */
+    border-radius: 8px; /* Coins arrondis pour l'esthétique */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de profondeur */
+    margin: 10px 0; /* Espacement entre les résultats */
+    display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Centre les éléments verticalement dans le flexbox */
 }
