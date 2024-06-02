@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratoire de Biologie Médicale - Medicare</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Medicare</h1>
+            <h2>Votre santé, votre priorité</h2>
+            <img src="images/logo.png" width="90px" height="90px" alt="Logo Medicare" class="logo">
+        </div>
+        <nav class="navigation">
+            <a href="#">Accueil</a>
+            <a href="#">Tout Parcourir</a>
+            <a href="#">Recherche</a>
+            <a href="#">Rendez-vous</a>
+            <a href="#">Votre Compte</a>
+        </nav>
+        <div class="content-section">   
+            <div class="conteneur3">
+                <div class="service">
+                    <div id="leftcolumn">
+                        <div class="service-image-container">
+                            <img src="img-labo.jpg" alt="Laboratoire de biologie médicale" class="service-image">
+                        </div>
+                    </div>
+                    <div id="rightcolumn">
+                        <div class="conteneur">
+                            <div class="service-details">
+                                <h3>Laboratoire de Biologie Médicale</h3>
+                                <p><strong>Salle :</strong> SC-101</p>
+                                <p><strong>Téléphone :</strong> +33 01 22 33 44 55</p>
+                                <p><strong>Email :</strong> labo.biologie@omnesante.fr</p>
+                                <button class="appointment-btn" onclick="window.location.href='Laboratoire de biology médicale.html'">Nos services</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Contactez-nous : email@medicare.com | +33 1 23 45 67 89 | 10 Rue Sextius Michel, 75015 Paris</p>
+            <div id="map" class="google-map"></div>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([48.850300, 2.289800], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([48.850300, 2.289800]).addTo(map)
+            .bindPopup('10 Rue Sextius Michel, 75015 Paris')
+            .openPopup();
+    </script>
+</body>
+</html>
